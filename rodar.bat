@@ -1,15 +1,25 @@
 @echo off
 
+cd /d "C:\Users\Pichau\OneDrive\ia-sulamericanos"
+
 echo =========================
-echo ATUALIZANDO MODELO
+echo TREINANDO IA
 echo =========================
 
 python modelo.py
 
 echo =========================
-echo INICIANDO STREAMLIT
+echo ENVIANDO PARA GITHUB
 echo =========================
 
-streamlit run app.py
+git add .
+
+git commit -m "Atualizacao automatica"
+
+git push
+
+echo =========================
+echo FINALIZADO
+echo =========================
 
 pause
