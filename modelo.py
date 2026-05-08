@@ -79,6 +79,7 @@ def rodar_modelo():
     df_resultado = df_resultado[[
         'Liga',
         'Data',
+        'Hora',
         'Time Casa',
         'Time Visitante',
         'Placar',
