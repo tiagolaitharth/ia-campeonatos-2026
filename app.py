@@ -24,6 +24,7 @@ df = pd.read_excel("resultado_modelo.xlsx")
 
 df['Data'] = pd.to_datetime(df['Data'])
 df['Data_str'] = df['Data'].dt.strftime('%d/%m/%Y')
+df['Hora'] = df['Hora'].astype(str).str.slice(0,5)
 
 df['Placar'] = df['Placar'].astype(str).str.strip()
 df['Placar'] = df['Placar'].replace("-", "🔮")
@@ -210,7 +211,7 @@ with tab1:
     # =========================
 
     df_hoje = df[df['Data_str'] == hoje_str]
-    df_hoje_futuro = df_hoje[df_hoje['Placar'] == "🔮"]
+    df_hoje_futuro = df_hoje[df_hoje['Placar'] == "---"]
 
     st.subheader("📅 Jogos de Hoje")
 
