@@ -113,8 +113,11 @@ df['Resultado'] = df['Placar'].apply(resultado_flag)
 # DATA HOJE
 # =========================
 
-hoje_str = datetime.today().strftime('%d/%m/%Y')
+from datetime import timedelta
 
+hoje_br = datetime.utcnow() - timedelta(hours=3)
+
+hoje_str = hoje_br.strftime('%d/%m/%Y')
 # =========================
 # ABAS
 # =========================
