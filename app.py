@@ -543,12 +543,6 @@ with tab3:
         "🇸🇪 Allsvenskan":
         "https://widgets.sofascore.com/pt-BR/embed/tournament/24/season/87925/standings/Allsvenskan%202026?widgetTitle=Allsvenskan%202026&showCompetitionLogo=true&widgetTheme=dark",
 
-        "🇸🇪 Ettan Norra":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/174277/season/89299/standings/Ettan%202026%2C%20Norra?widgetTitle=Ettan%202026%2C%20Norra&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇸🇪 Ettan Sodra":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/174278/season/89299/standings/Ettan%202026%2C%20Sodra?widgetTitle=Ettan%202026%2C%20Sodra&showCompetitionLogo=true&widgetTheme=dark",
-
         "🇸🇪 Superettan":
         "https://widgets.sofascore.com/pt-BR/embed/tournament/27/season/87924/standings/Superettan%202026?widgetTitle=Superettan%202026&showCompetitionLogo=true&widgetTheme=dark",
 
