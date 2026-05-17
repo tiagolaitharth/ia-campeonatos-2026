@@ -8,7 +8,18 @@ from datetime import datetime
 from datetime import timedelta
 
 from collections import Counter
-usuarios = st.secrets["usuarios"]
+
+usuarios = {
+
+    "tiago": {
+
+        "senha": "123",
+
+        "tipo": "admin",
+
+        "expira": "2099-12-31"
+    }
+}
 
 # =========================
 # CONFIG
