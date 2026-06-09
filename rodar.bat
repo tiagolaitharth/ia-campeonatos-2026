@@ -8,6 +8,8 @@ echo =========================
 
 python modelo.py
 
+python zeroazero.py
+
 echo =========================
 echo ENVIANDO PARA GITHUB
 echo =========================

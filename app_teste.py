@@ -9,6 +9,8 @@ from datetime import timedelta
 
 from collections import Counter
 
+#usuarios = st.secrets["usuarios"]
+
 usuarios = {
 
     "tiago": {
@@ -279,7 +281,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
     "⚽ Placares Processados",
 
-    "🏆 Ligas + Tabelas"
+    "🏆 Ligas"
 ])
 
 # =========================
@@ -1686,86 +1688,4 @@ with tab4:
 
     st.divider()
 
-    # =========================
-    # SOFASCORE
-    # =========================
-
-    st.subheader("📋 Tabelas SofaScore")
-
-    tabelas = {
-
-        "🇧🇷 Brasileirão Série A":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/83/season/87678/standings/Brasileiro%20Serie%20A%202026?widgetTitle=Brasileiro%20Serie%20A%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇧🇷 Brasileirão Série B":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/1449/season/89840/standings/Brasileiro%20Serie%20B%202026?widgetTitle=Brasileiro%20Serie%20B%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇦🇷 Argentina":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/143625/season/87913/standings/Apertura%2C%20Group%20B?widgetTitle=Apertura%2C%20Group%20B&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇨🇳 China":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/652/season/90049/standings/Chinese%20Super%20League%202026?widgetTitle=Chinese%20Super%20League%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇨🇴 Colômbia A":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/19232/season/88503/standings/Apertura?widgetTitle=Apertura&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇨🇴 Colômbia B":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/57659/season/89001/standings/Apertura?widgetTitle=Apertura&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇫🇮 Finlândia":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/31/season/87930/standings/Veikkausliiga%202026?widgetTitle=Veikkausliiga%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇰🇷 Coreia":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/3284/season/88606/standings/K-League%201%202026?widgetTitle=K-League%201%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇳🇴 Noruega Elite":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/5/season/87809/standings/Eliteserien%202026?widgetTitle=Eliteserien%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇳🇴 Noruega 1":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/6/season/87867/standings/1.%20Division%202026?widgetTitle=1.%20Division%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇵🇾 Paraguai":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/3133/season/69799/standings/Division%20de%20Honor%2C%20Apertura?widgetTitle=Division%20de%20Honor%2C%20Apertura&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇮🇪 Irlanda":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/718/season/87698/standings/First%20Division%202026?widgetTitle=First%20Division%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇸🇪 Allsvenskan":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/24/season/87925/standings/Allsvenskan%202026?widgetTitle=Allsvenskan%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇸🇪 Superettan":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/27/season/87924/standings/Superettan%202026?widgetTitle=Superettan%202026&showCompetitionLogo=true&widgetTheme=dark",
-
-        "🇺🇾 Uruguai":
-        "https://widgets.sofascore.com/pt-BR/embed/tournament/57657/season/89288/standings/Primera%20Division%202026%2C%20Overall?widgetTitle=Primera%20Division%202026%2C%20Overall&showCompetitionLogo=true&widgetTheme=dark"
-    }
-
-    col1, col2 = st.columns([1, 5])
-
-    with col1:
-
-        liga_escolhida = st.radio(
-
-            "Ligas",
-
-            list(tabelas.keys())
-        )
-
-    with col2:
-
-        iframe = tabelas[
-            liga_escolhida
-        ]
-
-        codigo = f'''
-        <iframe
-        src="{iframe}"
-        style="height:1123px!important;width:100%!important;border:none;"
-        scrolling="no">
-        </iframe>
-        '''
-
-        components.html(
-            codigo,
-            height=1150
-        )
+    
