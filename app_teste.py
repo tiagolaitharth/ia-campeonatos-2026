@@ -136,6 +136,20 @@ df = pd.read_excel(
 )
 
 # =========================
+# 0.5FT
+# =========================
+
+df_05 = pd.read_excel(
+    "resultado_saiu_gol.xlsx",
+    sheet_name="Jogos do Dia"
+)
+
+df_ranges_05 = pd.read_excel(
+    "resultado_saiu_gol.xlsx",
+    sheet_name="Ranges"
+)
+
+# =========================
 # DATA
 # =========================
 
@@ -273,7 +287,7 @@ hoje_str = hoje_br.strftime(
 # ABAS
 # =========================
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
 
     "⚽ Jogos do Dia",
 
@@ -281,7 +295,9 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
     "⚽ Placares Processados",
 
-    "🏆 Ligas"
+    "🏆 Ligas",
+
+    "⚽ 0.5FT"
 ])
 
 # =========================
@@ -1687,5 +1703,17 @@ with tab4:
         )
 
     st.divider()
+
+
+with tab5:
+
+    st.subheader("⚽ 0.5FT")
+
+    st.subheader("📊 Ranges")
+
+    st.dataframe(
+    df_ranges_05,
+    use_container_width=True
+    )
 
     
