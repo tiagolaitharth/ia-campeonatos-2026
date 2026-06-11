@@ -37,7 +37,7 @@ features = [
     "% Marca Gol Casa",
     "% Marca Gol Visit",
     "MÉDIA GOL A FAVOR CASA",
-    "MÉDIA  GOLS A FAVOR FORA",
+    "MÉDIA GOLS A FAVOR FORA",
     "MÉDIA GOLS CONTRA CASA",
     "MÉDIA GOLS CONTRA FORA"
 ]
